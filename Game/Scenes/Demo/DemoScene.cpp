@@ -23,11 +23,13 @@ int RandomInt(const int _min, const int _max)
 
 Demo::DemoScene::DemoScene(): Scene("DemoScene")
 {
+    //CHARGEMENT SPRITES
     AssetsModule* assets_module = Engine::GetInstance()->GetModuleManager()->GetModule<AssetsModule>();
     Texture* logo_texture = assets_module->LoadAsset<Texture>("logo.png");
 
     GameObject* const& logo = CreateGameObject("SFML Logo");
     logo->CreateComponent<SpriteRenderer>(logo_texture);
+    //---------------------------------------
 
     for (int i = 0; i < 10; ++i)
     {
