@@ -5,8 +5,9 @@
 #include "WindowModule.h"
 #include "BulletController.h"
 #include "Modules/InputModule.h"
-#include "Components/ARenderedComponent.h"
-#include "Components/RectangleShapeRenderer.h"
+
+#include "RectangleShapeRenderer.h"
+
 
 #include <SFML/System/Angle.hpp>
 #include <SFML/Window/Mouse.hpp>
@@ -23,6 +24,11 @@ void PlayerController::Update(float dt)
 
     ApplyMovement(dt);
     ApplyRotation();
+
+    if (InputModule::GetMouseButtonDown(sf::Mouse::Button::Left))
+    {
+        Shoot();
+    }
 }
 
 void PlayerController::DetectKeyboardLayout()
