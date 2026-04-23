@@ -18,18 +18,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\Demo\Tile.cpp">
+    <ClCompile Include="Scenes\Test\testScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scenes\Demo\DemoScene.cpp">
+    <ClCompile Include="include\Test\Ennemies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\Test\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Demo\Tile.h">
+    <ClInclude Include="Scenes\Test\testScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scenes\Demo\DemoScene.h">
+    <ClInclude Include="include\Test\Ennemies.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Test\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

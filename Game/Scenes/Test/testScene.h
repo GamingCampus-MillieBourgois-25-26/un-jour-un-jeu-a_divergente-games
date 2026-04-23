@@ -1,5 +1,6 @@
 #pragma once
 #include "Core/Scene.h"
+#include "Test/Player.h"
 
 namespace Test
 {
@@ -8,6 +9,8 @@ namespace Test
 	public:
 		TestScene();
 		void CreateBots();
+		float minSize = 100.f;
+		float maxSize = 300.f;
 		//Fonction pour les murs
 	private:
 

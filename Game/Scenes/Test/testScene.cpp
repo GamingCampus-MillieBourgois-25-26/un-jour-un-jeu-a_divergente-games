@@ -10,7 +10,7 @@
 #include "SquareCollider.h"
 #include "Texture.h"
 #include "WindowModule.h"
-
+#include "Demo/Tile.h"
 #include "Test/Ennemies.h"
 
 int RandomInt(const int _min, const int _max)
@@ -24,17 +24,25 @@ int RandomInt(const int _min, const int _max)
 Test::TestScene::TestScene() :Scene("TestScene")
 {
     // CHARGEMENT SPRITES
-        AssetsModule * assets_module = Engine::GetInstance()->GetModuleManager()->GetModule<AssetsModule>();
+    AssetsModule * assets_module = Engine::GetInstance()->GetModuleManager()->GetModule<AssetsModule>();
     Texture* logo_texture = assets_module->LoadAsset<Texture>("logo.png");
+    AssetsModule* asset = Engine::GetInstance()->GetModuleManager()->GetModule<AssetsModule>();
+    Texture* player_tex = asset->LoadAsset<Texture>("player.png");
 
     GameObject* const& logo = CreateGameObject("SFML Logo");
     logo->CreateComponent<SpriteRenderer>(logo_texture);
     //---------------------------------------
 
-    for (int i = 0; i < 10; ++i)
+   GameObject* player = CreateGameObject("Player");
+    auto* sprite_player = player->CreateComponent<SpriteRenderer>(player_tex);
+    sprite_player->SetSize({ 64.f,64.f });
+    player->SetPosition({ 200.f, 100.f });
+    player->CreateComponent<Player>();
+
+    /*for (int i = 0; i < 10; ++i)
     {
         CreateBots();
-    }
+    }*/
 }
 
 void Test::TestScene::CreateBots()
@@ -47,5 +55,7 @@ void Test::TestScene::CreateBots()
     const int random_position_x = RandomInt(0, window_size.x);
     const int random_position_y = RandomInt(0, window_size.y);
     bots->SetPosition(Maths::Vector2f(random_position_x, random_position_y));
-    bots->CreateComponent<Ennemies>(color);
+   // bots->CreateComponent<Tile>(color);
+    //const int random_size = RandomInt(minSize, maxSize);
+    //bots->CreateComponent<Tile>(color, Maths::Vector2i(random_size, random_size));
 }
