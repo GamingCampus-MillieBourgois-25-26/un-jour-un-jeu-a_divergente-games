@@ -47,15 +47,17 @@ Test::TestScene::TestScene() :Scene("TestScene")
 
 void Test::TestScene::CreateBots()
 {
+    AssetsModule* assetbots = Engine::GetInstance()->GetModuleManager()->GetModule<AssetsModule>();
+    Texture* bot_tex = assetbots->LoadAsset<Texture>("bot.png");
     GameObject* bots = CreateGameObject("bots");
-    sf::Color color = sf::Color::Red;
+    //sf::Color color = sf::Color::Red;
 
     const Maths::Vector2u window_size = Engine::GetInstance()->GetModuleManager()->GetModule<WindowModule>()->GetSize();
 
     const int random_position_x = RandomInt(0, window_size.x);
     const int random_position_y = RandomInt(0, window_size.y);
     bots->SetPosition(Maths::Vector2f(random_position_x, random_position_y));
-   // bots->CreateComponent<Tile>(color);
+    //bots->CreateComponent<Tile>(color);
     //const int random_size = RandomInt(minSize, maxSize);
     //bots->CreateComponent<Tile>(color, Maths::Vector2i(random_size, random_size));
 }

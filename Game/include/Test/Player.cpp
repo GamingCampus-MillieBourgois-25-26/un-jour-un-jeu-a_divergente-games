@@ -69,3 +69,8 @@ void Player::shoot()
 
 
 }
+
+sf::Vector2f Player::GetPosition()
+{
+    return position;
+}

@@ -17,7 +17,7 @@ public:
     void Move(float dt);
     void applyRotation(float dt);
     void shoot();
-
+    sf::Vector2f GetPosition();
 
 
 private:
@@ -27,7 +27,7 @@ private:
     int health;
     int damage;
     sf::Vector2f position;
-
+    
 
 };
 
