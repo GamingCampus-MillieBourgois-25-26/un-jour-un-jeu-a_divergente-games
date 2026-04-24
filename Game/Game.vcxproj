@@ -97,20 +97,33 @@
   <ItemGroup>
     <ClCompile Include="include\Demo\Tile.cpp" />
     <ClCompile Include="include\TopDownShooter\BulletController.cpp" />
+    <ClCompile Include="include\TOUHOU\Bullet.cpp" />
+    <ClCompile Include="include\TOUHOU\Enemy.cpp" />
+    <ClCompile Include="include\TOUHOU\gun.cpp" />
+    <ClCompile Include="include\TOUHOU\Player.cpp" />
+    <ClCompile Include="include\TOUHOU\QueueGlobal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Scenes\Demo\DemoScene.cpp" />
     <ClCompile Include="Scenes\TopDownShooter\TopDownScene.cpp" />
     <ClCompile Include="include\TopDownShooter\GameplatConfig.cpp" />
     <ClCompile Include="include\TopDownShooter\PlayerController.cpp" />
+    <ClCompile Include="Scenes\Touhou\TouhouScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Demo\Player.h" />
     <ClInclude Include="include\Demo\Tile.h" />
     <ClInclude Include="include\TopDownShooter\BulletController.h" />
+    <ClInclude Include="include\TOUHOU\Bullet.h" />
+    <ClInclude Include="include\TOUHOU\Enemy.h" />
+    <ClInclude Include="include\TOUHOU\gun.h" />
+    <ClInclude Include="include\TOUHOU\Player.h" />
+    <ClInclude Include="include\TOUHOU\QueueGlobal.h" />
+    <ClInclude Include="include\TOUHOU\QueueSystem.h" />
     <ClInclude Include="Scenes\Demo\DemoScene.h" />
     <ClInclude Include="Scenes\TopDownShooter\TopDownScene.h" />
     <ClInclude Include="include\TopDownShooter\GameplayConfig.h" />
     <ClInclude Include="include\TopDownShooter\PlayerController.h" />
+    <ClInclude Include="Scenes\Touhou\TouhouScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
